@@ -63,11 +63,12 @@ def getInputs():
     publicLocString = core.get_input('publicLocations', required=False)
     interval = core.get_input('interval', required=False)
     status = core.get_input('status', required=False)
-    print(privateLocations)
-    print(type(privateLocations))
 
-    privateLocations = eval(privateLocString)
-    publicLocations = eval(publicLocString)
+    if not privateLocString:
+        privateLocations = eval(privateLocString)
+
+    if not publicLocString:
+        publicLocations = eval(publicLocString)
 
     if (type(publicLocations) is str and type(privateLocations) is str): # Both pub/private locations are default empty string
         locations = ""
