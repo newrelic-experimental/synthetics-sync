@@ -64,14 +64,14 @@ jobs:
       # Parse out js filenames, which should match the entity names within NR, fetch the entity's guid, and update existing monitor or create new one
       - name: Sync Changes to Synthetics
         if: steps.changed-files.outputs.any_changed == 'true'
-        uses: newrelic-experimental/synthetics-sync
-        with: # OPTIONAL defaults for creation of new scripts committed - Remove if the only interest is updating existing monitors.
-          accountId: 1
-          runtime: "new"
-          privateLocations: "[{'guid': 'MTQ...'}]"
-          publicLocations: "['AWS_AP_EAST_1', 'AWS_US_EAST_2']"
-          interval: EVERY_15_MINUTES
-          status: ENABLED
+        uses: newrelic-experimental/synthetics-sync@v1.0
+        with: # OPTIONAL defaults for creation of new scripts committed
+          accountId: ""
+          runtime: ""
+          privateLocations: ""
+          publicLocations: ""
+          interval: ""
+          status: ""
 ```
 
 ## Inputs
@@ -97,7 +97,7 @@ Below are a couple different configurations for various use cases:
 ...
   - name: Sync Changes to Synthetics
     if: steps.changed-files.outputs.any_changed == 'true'
-    uses: newrelic-experimental/synthetics-sync
+    uses: newrelic-experimental/synthetics-sync@v1.0
 ...
 ```
 </details>
@@ -109,7 +109,7 @@ Below are a couple different configurations for various use cases:
 ...
   - name: Sync Changes to Synthetics
     if: steps.changed-files.outputs.any_changed == 'true'
-    uses: newrelic-experimental/synthetics-sync
+    uses: newrelic-experimental/synthetics-sync@v1.0
     with: # all optional defaults for creation of new scripts committed
       accountId: 123
       runtime: "new"
