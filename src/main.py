@@ -56,13 +56,16 @@ def readAndParseFile():
     return formatted
 
 def getInputs():
-    #Inputs for creation of new monitor upon new script commit[optional]
+    #Inputs for creation of new monitor upon new script commit [optional]
     acctId = core.get_input('accountId', required=False)
     runtime = core.get_input('runtime', required=False) #new or old
     privateLocString = core.get_input('privateLocations', required=False)
     publicLocString = core.get_input('publicLocations', required=False)
     interval = core.get_input('interval', required=False)
     status = core.get_input('status', required=False)
+    print(privateLocations)
+    print(type(privateLocations))
+
     privateLocations = eval(privateLocString)
     publicLocations = eval(publicLocString)
 
