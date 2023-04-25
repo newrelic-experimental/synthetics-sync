@@ -1,1 +1,1 @@
-# synthetics-sync
+# Synthetics Sync
