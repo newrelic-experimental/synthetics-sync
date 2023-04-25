@@ -146,6 +146,6 @@ If you believe you have found a security vulnerability in this project or any of
 
 ## License
 
-Github Actions New Relic Exporter is licensed under the [Apache 2.0](http://apache.org/licenses/LICENSE-2.0.txt) License.
+Synthetics Sync is licensed under the [Apache 2.0](http://apache.org/licenses/LICENSE-2.0.txt) License.
 
->New Relic Synthetics Sync also use source code from third-party libraries. You can find full details on which libraries are used and the terms under which they are licensed in the third-party notices document.
+>Synthetics Sync also use source code from third-party libraries. You can find full details on which libraries are used and the terms under which they are licensed in the third-party notices document.
