@@ -93,7 +93,7 @@ def getInputs():
 
 
 def getMonitor(name):
-    vars = {
+    vars = {}
     gql = f"""
         {{
           actor {{
