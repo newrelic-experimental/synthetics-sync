@@ -98,6 +98,13 @@ Below are a couple different configurations for various use cases:
   - name: Sync Changes to Synthetics
     if: steps.changed-files.outputs.any_changed == 'true'
     uses: newrelic-experimental/synthetics-sync@v1.0
+    with:
+      accountId: ""
+      runtime: ""
+      privateLocations: ""
+      publicLocations: ""
+      interval: ""
+      status: ""
 ...
 ```
 </details>
