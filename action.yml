@@ -1,0 +1,46 @@
+name: New Relic Synthetics Sync
+description: Syncs changes made to Synthetics scripted browser or api type monitors committed to a repo.
+author: khpeet
+
+branding:
+  icon: 'upload-cloud'
+  color: 'green'
+
+inputs:
+  accountId:
+    description: "New Relic account id in which new monitor will be created within."
+    required: false
+    default: ""
+  runtime:
+    description: "Synthetics runtime the monitor will use."
+    required: false
+    default: ""
+  privateLocations:
+    description: "Private location guids that the new monitor will execute on."
+    required: false
+    default: ""
+  publicLocations:
+    description: "Public location names that the new monitor will execute on."
+    required: false
+    default: ""
+  interval:
+    description: "The execution frequency of new monitor created."
+    required: false
+    default: ""
+  status:
+    description: "Whether a new monitor created within New Relic will be enabled or disabled."
+    required: false
+    default: ""
+
+
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.accountId }}
+    - ${{ inputs.runtime }}
+    - ${{ inputs.privateLocations }}
+    - ${{ inputs.publicLocations }}
+    - ${{ inputs.interval }}
+    - ${{ inputs.status }}
