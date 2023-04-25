@@ -10,6 +10,7 @@ GRAPHQL_KEY =  os.getenv('NEW_RELIC_API_KEY')
 WORKSPACE = os.getenv('GITHUB_WORKSPACE')
 
 def main():
+    print('test')
     fileNames = readAndParseFile()
     inputs = getInputs()
 
@@ -64,10 +65,10 @@ def getInputs():
     interval = core.get_input('interval', required=False)
     status = core.get_input('status', required=False)
 
-    if not privateLocString:
+    if privateLocString != "":
         privateLocations = eval(privateLocString)
 
-    if not publicLocString:
+    if publicLocString != "":
         publicLocations = eval(publicLocString)
 
     if (type(publicLocations) is str and type(privateLocations) is str): # Both pub/private locations are default empty string
