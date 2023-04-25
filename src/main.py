@@ -93,28 +93,28 @@ def getInputs():
 
 
 def getMonitor(name):
-    vars = {"monitorName":  name}
-    gql = """
-        query ($monitorName: String!) {
-          actor {
-            entitySearch(queryBuilder: {domain: SYNTH, name: $monitorName}) {
-              results {
-                entities {
-                  ... on SyntheticMonitorEntityOutline {
+    vars = {
+    gql = f"""
+        {{
+          actor {{
+            entitySearch(query: "domain='SYNTH' and name='{name}'") {{
+              results {{
+                entities {{
+                  ... on SyntheticMonitorEntityOutline {{
                     name
                     monitorId
                     monitorType
                     guid
-                    account {
+                    account {{
                       id
                       name
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
+                    }}
+                  }}
+                }}
+              }}
+            }}
+          }}
+        }}
     """
     h = {'Content-Type': 'application/json', 'API-Key': GRAPHQL_KEY}
     try:
