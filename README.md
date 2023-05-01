@@ -1,3 +1,5 @@
+[![New Relic Experimental header](https://github.com/newrelic/opensource-website/raw/master/src/images/categories/Experimental.png)](https://opensource.newrelic.com/oss-category/#new-relic-experimental)
+
 # Synthetics Sync
 Github action that will sync synthetic script commits to corresponding Synthetic monitors within New Relic.
 
