@@ -136,6 +136,8 @@ See [inputs](#inputs) for more information.
 * [Public Locations](https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/administration/synthetic-public-minion-ips/#location)
 * [Intro to Writing Scripts](https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/scripting-monitors/introduction-scripted-browser-monitors/)
 
+Check out example [repo here](https://github.com/khpeet/local-newrelic-synthetics-example/actions) that uses this action.
+
 ## Contributing
 
 We encourage your contributions to improve [Synthetics Sync](../../)! Keep in mind when you submit your pull request, you'll need to sign the CLA via the click-through using CLA-Assistant. You only have to sign the CLA one time per project. If you have any questions, or to execute our corporate CLA, required if your contribution is on behalf of a company, please drop us an email at opensource@newrelic.com.
